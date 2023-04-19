@@ -27,7 +27,7 @@ class Pokemon {
         name = json["species"]["name"],
         weight = json["weight"].toDouble() / 10.0,
         height = json["height"].toDouble() * 10.0,
-        ability = json["abilities"]["name"],
+        ability = json["abilities"][0]["ability"]["name"],
         typesList = getListTypesFromJson(json["types"]);
 }
 
